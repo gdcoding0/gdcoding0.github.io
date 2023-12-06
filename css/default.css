@@ -62,6 +62,7 @@ li {
   color: var(--white);
   font-weight: 600;
   flex: 1;
+  transition: all 250ms ease-out;
 }
 
 .btn-landing:first-of-type {
@@ -76,8 +77,19 @@ li {
   background-color: var(--cs-3);
 }
 
+.btn-landing.btn-newplan:focus {
+  background-color: #41fa8b;
+  scale: 1.01;
+}
+
 .btn-landing.btn-viewplan {
   border: 1px solid var(--white);
+}
+
+.btn-landing.btn-viewplan:focus {
+  background-color: var(--white);
+  color: var(--normal-text);
+  scale: 1.01;
 }
 
 html {
