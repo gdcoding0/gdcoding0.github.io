@@ -79,7 +79,7 @@ li {
 
 .btn-landing.btn-newplan:focus {
   background-color: #41fa8b;
-  scale: 1.01;
+  scale: 1.03;
 }
 
 .btn-landing.btn-viewplan {
@@ -89,7 +89,7 @@ li {
 .btn-landing.btn-viewplan:focus {
   background-color: var(--white);
   color: var(--normal-text);
-  scale: 1.01;
+  scale: 1.03;
 }
 
 html {
