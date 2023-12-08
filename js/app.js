@@ -11,10 +11,10 @@ let pages = [
       title="Landing Page Title"
     />
     <div class="landing-btns">
-      <button class="btn-landing btn-shadow btn-newplan">
+      <button class="btn-landing btn-shadow btn-newplan" id="enter">
         Create Plan
       </button>
-      <button class="btn-landing btn-shadow btn-viewplan btn-disabled">
+      <button class="btn-landing btn-shadow btn-viewplan btn-disabled" id="view">
         View Plan
       </button>
     </div>
@@ -125,27 +125,55 @@ let pages = [
   },
 ];
 
-isLoaded = false;
+let appBody;
+let isLoaded;
 
-const appBody = document.querySelector(".app-body");
-
-document.addEventListener("DOMContentLoaded", loadSequence);
+window.addEventListener("DOMContentLoaded", loadSequence);
 
 function loadSequence() {
-  appBody.innerHTML = pages[0].content;
-  if ((appBody.innerHTML = pages[0].content)) {
-    console.log("Page matches landing page");
-    isLoaded = true;
-    if (isLoaded) {
-      console.log("Page loaded");
-      appBody.classList.add("load-page");
-      const enterBtn = document.getElementById("enter");
-      console.log(enterBtn);
-      enterBtn.addEventListener("click", function () {
-        console.log("Enter button clicked");
-      });
+  appBody = document.querySelector(".app-body");
+  const findPage = pages.find((pages) => pages.title === "landing");
+  if (findPage) {
+    const findIndex = pages.findIndex((pages) => pages === findPage);
+    console.log(findIndex);
+    appBody.innerHTML = pages[findIndex].content;
+    appBody.classList.add(".app-landing");
+    loadInAnimation();
+  }
+  function loadInAnimation() {
+    console.log("loadInAnimation function call");
+    appBody.classList.add("load-page");
+    enterEvent();
+  }
+}
+
+function enterEvent() {
+  console.log("enterEvent function call");
+  const enterBtn = document.getElementById("enter");
+  enterBtn.addEventListener("click", function () {
+    const getCurrent = appBody.classList[1];
+    appNav(getCurrent, "newplan");
+  });
+}
+
+function appNav(current, next) {
+  const getCurrent = appBody.classList[1];
+  if (getCurrent === current) {
+    console.log("On the right page!");
+    const findPage = pages.find((pages) => pages.title === next);
+    if (findPage) {
+      const findIndex = pages.findIndex((pages) => pages === findPage);
+      console.log(findIndex);
+      appBody.innerHTML = pages[findIndex].content;
+      appBody.classList.remove(getCurrent);
+      appBody.classList.add("app-new");
+
+      setTimeout(() => {
+        document.body.style.background = "none";
+        document.body.style.backgroundColor = getComputedStyle(
+          document.documentElement
+        ).getPropertyValue("--cs-4");
+      }, 500);
     }
-  } else {
-    console.log("Landing page not loaded");
   }
 }
