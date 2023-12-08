@@ -130,6 +130,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   color: var(--normal-text);
+  transition: all 250ms ease-out;
 }
 
 body.land {
@@ -291,7 +292,11 @@ body.new {
 }
 
 .load-page {
-  animation: load-in 3s both linear;
+  animation: load-in 1.75s both linear;
+}
+
+.load-bg {
+  background-color: var(--cs-4) !important;
 }
 
 @keyframes load-in {
