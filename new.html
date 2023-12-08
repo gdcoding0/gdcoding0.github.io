@@ -20,15 +20,15 @@
           <h1 class="app-title">Todays Plan</h1>
         </header>
         <main class="content">
-          <div class="quadrant">
-            <div class="quadrant-top">
-              <span class="quad-number">1</span>
-              <div class="quad-titles">
-                <h2 class="quadrant-title">Important</h2>
-                <h2 class="quadrant-title">Urgent</h2>
+          <div class="quad-grid">
+            <div class="quadrant">
+              <div class="quadrant-top">
+                <span class="quad-number">1</span>
+                <div class="quad-titles">
+                  <h2 class="quadrant-title">Important</h2>
+                  <h2 class="quadrant-title">& Urgent</h2>
+                </div>
               </div>
-            </div>
-            <div class="quad-grid">
               <div class="interactive">
                 <textarea
                   class="quad quad-1"
@@ -36,12 +36,14 @@
                   id="quad-text"
                   cols="30"
                   rows="10"
-                ></textarea>
+                >
+                </textarea>
+                <button class="btn-quad-save btn-enabled">Save</button>
               </div>
             </div>
             <div class="quadrant">
               <div class="quadrant-top">
-                <span class="quad-number">1</span>
+                <span class="quad-number">2</span>
                 <div class="quad-titles">
                   <h2 class="quadrant-title">Important</h2>
                   <h2 class="quadrant-title">& Not Urgent</h2>
@@ -55,11 +57,12 @@
                   cols="30"
                   rows="10"
                 ></textarea>
+                <button class="btn-quad-save btn-enabled">Save</button>
               </div>
             </div>
             <div class="quadrant">
               <div class="quadrant-top">
-                <span class="quad-number">1</span>
+                <span class="quad-number">3</span>
                 <div class="quad-titles">
                   <h2 class="quadrant-title">Not Important</h2>
                   <h2 class="quadrant-title">Urgent</h2>
@@ -73,11 +76,12 @@
                   cols="30"
                   rows="10"
                 ></textarea>
+                <button class="btn-quad-save btn-enabled">Save</button>
               </div>
             </div>
             <div class="quadrant">
               <div class="quadrant-top">
-                <span class="quad-number">1</span>
+                <span class="quad-number">4</span>
                 <div class="quad-titles">
                   <h2 class="quadrant-title">Not Important</h2>
                   <h2 class="quadrant-title">& Not Urgent</h2>
@@ -91,17 +95,20 @@
                   cols="30"
                   rows="10"
                 ></textarea>
+                <button class="btn-quad-save btn-enabled">Save</button>
               </div>
             </div>
           </div>
         </main>
         <nav class="bottom-nav">
-          <div class="nav-left">
-            <img src="./img/write.svg" alt="Write" title="Write" />
-            <img src="./img/list.svg" alt="List" title="List" />
-          </div>
-          <div class="nav-right">
-            <img src="img/settings.svg" alt="Settings" title="Settings" />
+          <div class="nav-bar">
+            <div class="nav-left">
+              <img src="./img/write.svg" alt="Write" title="Write" />
+              <img src="./img/list.svg" alt="List" title="List" />
+            </div>
+            <div class="nav-right">
+              <img src="img/settings.svg" alt="Settings" title="Settings" />
+            </div>
           </div>
         </nav>
       </div>
