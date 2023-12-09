@@ -119,6 +119,12 @@ li {
   background-color: var(--white);
 }
 
+.btn-debug {
+  background-color: var(--white);
+  border: none;
+  color: var(--normal-text);
+}
+
 body {
   position: relative;
   font-family: var(--font-name);
@@ -149,7 +155,8 @@ body.new {
   top: 10%;
   left: 50%;
   transform: var(--transform-center);
-  width: 750px;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Landing Div */
@@ -329,4 +336,10 @@ body.new {
 
 .alert-head {
   font-size: 38px;
+}
+
+.debug-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
 }

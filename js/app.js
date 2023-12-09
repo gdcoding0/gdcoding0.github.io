@@ -3,6 +3,10 @@ let pages = [
     title: "landing",
     pageid: 1,
     content: `
+    <div class="debug-menu">
+    <button class="btn-debug debug-back">Back</button>
+    <button class="btn-debug debug-forward">Forward</button>
+    </div>
     <main class="landing">
     <img
       class="appimg-landing"
@@ -25,6 +29,10 @@ let pages = [
     title: "newplan",
     id: 2,
     content: `
+    <div class="debug-menu">
+    <button class="btn-debug debug-back">Back</button>
+    <button class="btn-debug debug-forward">Forward</button>
+    </div>
     <header class="top-title">
           <h1 class="app-title">Todays Plan</h1>
         </header>
@@ -125,6 +133,8 @@ let pages = [
   },
 ];
 
+let timeManageArray = [];
+
 let appBody;
 let isLoaded;
 
@@ -167,13 +177,53 @@ function appNav(current, next) {
       appBody.innerHTML = pages[findIndex].content;
       appBody.classList.remove(getCurrent);
       appBody.classList.add("app-new");
-
-      setTimeout(() => {
-        document.body.style.background = "none";
-        document.body.style.backgroundColor = getComputedStyle(
+      if (next === "newplan") {
+        setTimeout(() => {
+          document.body.style.background = "none";
+          document.body.style.backgroundColor = getComputedStyle(
+            document.documentElement
+          ).getPropertyValue("--cs-4");
+        }, 500);
+        addEventsSaveBtns();
+        function addEventsSaveBtns() {
+          const getSaveBtns = appBody.querySelectorAll(".btn-quad-save");
+          getSaveBtns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+              const btnIndex = Array.from(getSaveBtns).indexOf(btn);
+              const textAreas = appBody.querySelectorAll(".quad");
+              console.log(textAreas);
+              switch (btnIndex) {
+                case 0:
+                  console.log("Quadrant 1");
+                  saveNewEntry(1, textAreas[btnIndex].value);
+                case 1:
+                  console.log("Quadrant 2");
+                  saveNewEntry(2, textAreas[btnIndex].value);
+                case 2:
+                  console.log("Quadrant 3");
+                  saveNewEntry(3, textAreas[btnIndex].value);
+                case 3:
+                  console.log("Quadrant 4");
+                  saveNewEntry(4, textAreas[btnIndex].value);
+              }
+            });
+          });
+        }
+      } else {
+        document.body.style.background = getComputedStyle(
           document.documentElement
-        ).getPropertyValue("--cs-4");
-      }, 500);
+        ).getPropertyValue("--bg-gradient");
+      }
     }
   }
+}
+
+function saveNewEntry(quad, textarea) {
+  const newEntry = new timeEntry(quad, textarea);
+  timeManageArray.push(newEntry);
+}
+
+function timeEntry(quadrant, text) {
+  this.quadrant = quadrant;
+  this.text = text;
 }
