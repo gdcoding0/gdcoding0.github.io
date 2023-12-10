@@ -66,6 +66,16 @@ li {
   transition: all 250ms ease-out;
 }
 
+.debug-notify {
+  position: absolute;
+  top: 5px;
+  font-size: 30px;
+  color: var(--white);
+  background-color: var(--normal-text);
+  padding: 0.25rem 0.5rem;
+  transition: all 250ms ease-out;
+}
+
 .btn-landing:first-of-type {
   margin-bottom: 1rem;
 }

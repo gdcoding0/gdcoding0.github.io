@@ -5,8 +5,8 @@ let pages = [
     pageid: 1,
     content: `
     <div class="debug-menu">
-    <button class="btn-debug debug-back">Back</button>
-    <button class="btn-debug debug-forward">Forward</button>
+    <button class="btn-debug debug-back" onclick="debugMenu('landing')">Back</button>
+    <button class="btn-debug debug-forward" onclick="debugMenu('form')">Forward</button>
     </div>
     <main class="landing">
     <img
@@ -31,8 +31,8 @@ let pages = [
     id: 2,
     content: `
     <div class="debug-menu">
-    <button class="btn-debug debug-back">Back</button>
-    <button class="btn-debug debug-forward">Forward</button>
+    <button class="btn-debug debug-back" onclick="debugMenu('landing')">Back</button>
+    <button class="btn-debug debug-forward" onclick="debugMenu('form')">Forward</button>
     </div>
     <header class="top-title">
           <h1 class="app-title">Todays Plan</h1>
@@ -295,4 +295,32 @@ function timeEntry(quadrant, text) {
   this.add = function () {
     localStorage.setItem("bestday", JSON.parse(entryString));
   };
+}
+
+// Debug menu
+function debugMenu(direction) {
+  const getCurrent = appBody.classList[1];
+  switch (direction) {
+    case "landing":
+      appNav(getCurrent, "landing");
+      notify(direction);
+      break;
+    case "form":
+      appNav(getCurrent, "newplan");
+      notify(direction);
+      break;
+    case "onboard":
+      appBody.innerHTML = pages[2].content;
+      notify(direction);
+      break;
+  }
+  function notify() {
+    const addEl = document.createElement("span");
+    addEl.className = "debug-notify";
+    addEl.textContent = `Debug: ${direction}`;
+    document.body.appendChild(addEl);
+    setTimeout(() => {
+      document.body.removeChild(addEl);
+    }, 1000);
+  }
 }
