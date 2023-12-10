@@ -139,6 +139,7 @@ let timeManageArray = [];
 
 let appBody;
 let hasLocal;
+let onBoardingDone = false;
 
 function getLocal(key) {
   return new Promise((resolve, reject) => {
