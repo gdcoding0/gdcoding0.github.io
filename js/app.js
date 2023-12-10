@@ -68,7 +68,7 @@ let pages = [
               </div>
               <div class="interactive">
                 <textarea
-                  class="quad quad-1"
+                  class="quad quad-2"
                   name="quadrant-text"
                   id="quad-text"
                   cols="30"
@@ -87,7 +87,7 @@ let pages = [
               </div>
               <div class="interactive">
                 <textarea
-                  class="quad quad-1"
+                  class="quad quad-3"
                   name="quadrant-text"
                   id="quad-text"
                   cols="30"
@@ -106,7 +106,7 @@ let pages = [
               </div>
               <div class="interactive">
                 <textarea
-                  class="quad quad-1"
+                  class="quad quad-4"
                   name="quadrant-text"
                   id="quad-text"
                   cols="30"
@@ -137,6 +137,7 @@ let timeManageArray = [];
 
 let appBody;
 let isLoaded;
+let hasLocal;
 
 window.addEventListener("DOMContentLoaded", loadSequence);
 
@@ -154,6 +155,34 @@ function loadSequence() {
     console.log("loadInAnimation function call");
     appBody.classList.add("load-page");
     enterEvent();
+  }
+  getKey();
+}
+
+function getLocal(key) {
+  return new Promise((resolve, reject) => {
+    try {
+      const item = JSON.parse(localStorage.getItem(key));
+      resolve(item);
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
+
+async function getKey() {
+  const viewBtn = document.getElementById("view");
+  console.log(viewBtn);
+  try {
+    const item = await getLocal("bestday");
+    if (item === null) {
+      console.log("No key");
+    } else {
+      viewBtn.classList.remove("btn-disabled");
+      console.log(item);
+    }
+  } catch (error) {
+    console.error(error);
   }
 }
 
@@ -196,15 +225,19 @@ function appNav(current, next) {
                 case 0:
                   console.log("Quadrant 1");
                   saveNewEntry(1, textAreas[btnIndex].value);
+                  break;
                 case 1:
                   console.log("Quadrant 2");
                   saveNewEntry(2, textAreas[btnIndex].value);
+                  break;
                 case 2:
                   console.log("Quadrant 3");
                   saveNewEntry(3, textAreas[btnIndex].value);
+                  break;
                 case 3:
                   console.log("Quadrant 4");
                   saveNewEntry(4, textAreas[btnIndex].value);
+                  break;
               }
             });
           });
@@ -221,9 +254,14 @@ function appNav(current, next) {
 function saveNewEntry(quad, textarea) {
   const newEntry = new timeEntry(quad, textarea);
   timeManageArray.push(newEntry);
+  newEntry.add();
 }
 
 function timeEntry(quadrant, text) {
+  const entryString = quadrant + text;
   this.quadrant = quadrant;
   this.text = text;
+  this.add = function () {
+    localStorage.setItem("bestday", JSON.parse(entryString));
+  };
 }
