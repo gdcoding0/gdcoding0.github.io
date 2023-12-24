@@ -624,4 +624,8 @@ main .content-area .content-el__side .side-search {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
+  header nav .menu {
+    width: 100vw;
+  }
 }
