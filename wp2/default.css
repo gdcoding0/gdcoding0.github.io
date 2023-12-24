@@ -348,6 +348,22 @@ header nav .menu .menu-list li:hover {
   transform: translateX(-2px);
 }
 
+/* Menu List > Search */
+
+header nav .menu .search {
+  margin-top: 2rem;
+}
+
+header nav .menu .search .searchbox {
+  height: 50px;
+  width: 350px;
+}
+
+header nav .menu .search .search-icon {
+  width: 20px !important;
+  top: 5px !important;
+}
+
 /* INTRO AREA */
 
 main .intro {
@@ -627,5 +643,9 @@ main .content-area .content-el__side .side-search {
 
   header nav .menu {
     width: 100vw;
+  }
+
+  header nav .menu .menu-list li {
+    font-size: 28px;
   }
 }
