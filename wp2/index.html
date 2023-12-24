@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu-layer"></div>
+      <header>
+        <nav>
+          <div class="nav-title">
+            <a href="#"><h1 class="nav-title nav-title__main">Minimal</h1></a>
+          </div>
+          <div class="nav-menu">
+            <!-- <img
+              class="nav-hamburger"
+              id="hamburger"
+              src="./img/ham.svg"
+              alt="Hamburger Menu"
+              title="Menu"
+            /> -->
+            <svg
+              class="nav-hamburger"
+              id="hamburger"
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="25"
+              viewBox="0 0 15 15"
+            >
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M1.5 3a.5.5 0 0 0 0 1h12a.5.5 0 0 0 0-1zM1 7.5a.5.5 0 0 1 .5-.5h12a.5.5 0 0 1 0 1h-12a.5.5 0 0 1-.5-.5m0 4a.5.5 0 0 1 .5-.5h12a.5.5 0 0 1 0 1h-12a.5.5 0 0 1-.5-.5"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <div class="menu menu-hidden" id="menu">
+              <svg
+                id="close"
+                class="nav-hamburger nav-hamburger__close"
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="35"
+                viewBox="0 0 15 15"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M.877 7.5a6.623 6.623 0 1 1 13.246 0a6.623 6.623 0 0 1-13.246 0M7.5 1.827a5.673 5.673 0 1 0 0 11.346a5.673 5.673 0 0 0 0-11.346m2.354 3.32a.5.5 0 0 1 0 .707L8.207 7.5l1.647 1.646a.5.5 0 0 1-.708.708L7.5 8.207L5.854 9.854a.5.5 0 0 1-.708-.708L6.793 7.5L5.146 5.854a.5.5 0 0 1 .708-.708L7.5 6.793l1.646-1.647a.5.5 0 0 1 .708 0"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <menu class="menu-list">
+                <li><a href="#">Home</a></li>
+                <li id="bloghover">
+                  <a href="#">Blog</a>
+                  <div class="blog-drop">
+                    <ul class="blog-list hover-off">
+                      <li><a href="#">Example Post 1</a></li>
+                      <li><a href="#">Example Post 2</a></li>
+                      <li><a href="#">Example Post 3</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="#">About</a></li>
+              </menu>
+              <search class="search">
+                <div class="search-container">
+                  <img
+                    class="search-icon"
+                    src="./img/search.svg"
+                    alt="Search"
+                  />
+                  <input
+                    class="searchbox"
+                    id="sidesbox"
+                    type="text"
+                    value=""
+                    placeholder="Search"
+                  />
+                </div>
+              </search>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <section class="intro">
+          <h2 class="intro-title">Minimal WordPress Theme</h2>
+          <p class="intro-para">
+            A focus on functionality and simplicity without the bells and
+            whistles!
+          </p>
+        </section>
+        <section class="content-area content-area__grid">
+          <div class="content-el content-el__posts">
+            <article class="post theme-ge-bs">
+              <div class="img-container">
+                <img
+                  class="post-img"
+                  src="./img/postbg.jpg"
+                  alt="Post Background"
+                  title="Post Background"
+                />
+                <div class="overlay">
+                  <span class="overlay-text">View Post</span>
+                </div>
+              </div>
+              <div class="post-container">
+                <a class="ptitle-link" href="#"
+                  ><h3 class="post-title">Believing is Perceiving</h3></a
+                >
+                <p class="post-excerpt">
+                  Lorem ipsum dolor sit amet consectetur. Senectus et odio
+                  adipiscing faucibus id sit leo elit. Euismod enim aliquet at
+                  aliquam in malesuada dictum pharetra. Aenean tempus mattis non
+                  at mi. Pretium varius arcu mi gravida.
+                </p>
+                <div class="post-details">
+                  <div class="post-date">
+                    <img
+                      class="post-info post-info__post-cal"
+                      src="./img/date.svg"
+                      alt="Date Posted"
+                      title="Date Posted"
+                    />
+                    <span class="details">22nd December 2023</span>
+                  </div>
+                  <div class="post-tags">
+                    <img
+                      class="post-info post-info__post-tag"
+                      src="./img/tag.svg"
+                      alt="Post Tags"
+                      title="Post Tags"
+                    />
+                    <span class="details details__tag">Announcements</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="post theme-ge-bs">
+              <div class="post-wrapper">
+                <div class="img-container">
+                  <img
+                    class="post-img"
+                    src="./img/postbg.jpg"
+                    alt="Post Background"
+                    title="Post Background"
+                  />
+
+                  <div class="overlay">
+                    <span class="overlay-text">View Post</span>
+                  </div>
+                </div>
+                <div class="post-container">
+                  <a class="ptitle-link" href="#"
+                    ><h3 class="post-title">Believing is Perceiving</h3></a
+                  >
+                  <p class="post-excerpt">
+                    Lorem ipsum dolor sit amet consectetur. Senectus et odio
+                    adipiscing faucibus id sit leo elit. Euismod enim aliquet at
+                    aliquam in malesuada dictum pharetra. Aenean tempus mattis
+                    non at mi. Pretium varius arcu mi gravida.
+                  </p>
+                  <div class="post-details">
+                    <div class="post-date">
+                      <img
+                        class="post-info post-info__post-cal"
+                        src="./img/date.svg"
+                        alt="Date Posted"
+                        title="Date Posted"
+                      />
+                      <span class="details">22nd December 2023</span>
+                    </div>
+                    <div class="post-tags">
+                      <img
+                        class="post-info post-info__post-tag"
+                        src="./img/tag.svg"
+                        alt="Post Tags"
+                        title="Post Tags"
+                      />
+                      <span class="details details__tag">Announcements</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <aside class="content-el content-el__side">
+            <search class="side-search theme-ge-bs">
+              <div class="search-box">
+                <input
+                  type="text"
+                  class="search"
+                  id="search"
+                  placeholder="Search..."
+                />
+                <img
+                  class="search-btn"
+                  src="./img/search.svg"
+                  alt="Search"
+                  title="Search"
+                />
+              </div>
+            </search>
+            <section class="side-recent theme-ge-bs side-el-dp">
+              <h4 class="side-title">Recent Posts</h4>
+              <ul class="side-list">
+                <li><a href="#">Believing is Perceiving</a></li>
+                <li><a href="#">Believing is Perceiving</a></li>
+              </ul>
+            </section>
+            <section class="side-categories theme-ge-bs side-el-dp">
+              <h4 class="side-title">Categories</h4>
+              <ul class="side-list">
+                <li>
+                  <a href="#"
+                    >Announcements <span class="cat-numbers">(6)</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#">General <span class="cat-numbers">(3)</span></a>
+                </li>
+                <li>
+                  <a href="#">Fun Stuff <span class="cat-numbers">(4)</span></a>
+                </li>
+              </ul>
+            </section>
+            <section class="side-tags theme-ge-bs side-el-dp">
+              <h4 class="side-title">Tags</h4>
+              <div class="tags-area">
+                <a class="tag-link" href="#"><span class="tag">fun</span></a>
+                <a class="tag-link" href="#"><span class="tag">designs</span></a
+                ><a class="tag-link" href="#"><span class="tag">news</span></a
+                ><a class="tag-link" href="#"
+                  ><span class="tag">personal</span></a
+                ><a class="tag-link" href="#"><span class="tag">work</span></a>
+              </div>
+            </section>
+          </aside>
+        </section>
+      </main>
+    </div>
+    <script src="./js/app.js" defer></script>
+  </body>
+</html>
