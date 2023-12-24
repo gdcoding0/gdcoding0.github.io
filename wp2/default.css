@@ -622,5 +622,6 @@ main .content-area .content-el__side .side-search {
 
   main .content-area.content-area__grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
