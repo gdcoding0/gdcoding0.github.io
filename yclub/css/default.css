@@ -137,6 +137,69 @@ body {
   text-rendering: geometricPrecision;
 }
 
+/* FOR DEMO/DRAFT PURPOSES
+   MODAL
+*/
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: var(--ycw-cs2);
+  color: var(--ycw-cs3);
+  padding: 2rem;
+  opacity: 1;
+  transition: all 500ms ease;
+}
+
+.modal.hidden {
+  opacity: 0;
+  z-index: -1;
+}
+
+.modal.over {
+  background-color: #1e1e1e60;
+}
+
+.modal .modal-title {
+  background-color: var(--ycw-cs3);
+  color: var(--ycw-cs2);
+  padding: 2rem;
+}
+
+.modal .modal-para:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+.modal .modal-title .modal-head {
+  font-size: 42px;
+}
+
+.modal .modal-btn {
+  background-color: transparent;
+  color: var(--ycw-cs2);
+  font-size: 32px;
+  border: 2px solid var(--ycw-cs2);
+  padding: 0.5rem 1rem;
+  margin-top: 2rem;
+  transition: all 250ms ease;
+}
+
+.modal .modal-btn:hover {
+  background-color: var(--ycw-cs2);
+  color: var(--ycw-cs3);
+}
+
 /* HEADER */
 
 header {
