@@ -582,3 +582,47 @@ footer .footer-end .footer-container {
   display: flex;
   justify-content: space-between;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .club-logo.club-logo__main {
+    width: 100px;
+  }
+
+  header nav {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--ycw-cs2);
+    z-index: 9998 !important;
+    padding: 0.5rem;
+  }
+
+  header nav .nav-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header nav .nav-container .nav-links li {
+    display: block;
+    width: fit-content;
+    margin-top: 2rem;
+  }
+
+  header nav .nav-container .nav-socials {
+    margin-top: 2rem;
+  }
+
+  header nav .nav-container .nav-socials .ns-logos {
+    align-self: flex-start;
+  }
+
+  header nav .nav-links li.nl-cta {
+    display: inline-block;
+    padding: 0;
+    background-color: unset !important;
+  }
+
+  header .hero-area {
+    display: none;
+  }
+}
