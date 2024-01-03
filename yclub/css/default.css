@@ -588,10 +588,13 @@ footer .footer-end .footer-container {
     width: 100px;
   }
 
-  header nav {
-    display: block;
+  header {
     width: 100vw;
+  }
+
+  header nav {
     height: 100vh;
+    display: block;
     background-color: var(--ycw-cs2);
     z-index: 9998 !important;
     padding: 0.5rem;
@@ -624,5 +627,9 @@ footer .footer-end .footer-container {
 
   header .hero-area {
     display: none;
+  }
+
+  footer .footer-nav .footer-container.footer-container__nav {
+    flex-direction: column;
   }
 }
