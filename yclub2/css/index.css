@@ -79,7 +79,7 @@ header {
 
 header nav {
   color: var(--ycw-cs3);
-  background-color: var(--ycw-cs2);
+  transition: all 100ms ease-out;
 }
 
 nav.top {
@@ -89,14 +89,15 @@ nav.top {
   top: 0;
   left: 0;
   z-index: 9999;
+  background-color: var(--ycw-cs2);
 }
 
 #ham {
-  width: 25px;
+  width: 40px;
 }
 
 .club-logo {
-  width: 150px;
+  width: 175px !important;
   transition: all 300ms linear;
 }
 
@@ -140,12 +141,14 @@ nav.top {
 .nav-socials {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 0.5rem;
+  align-items: flex-end;
+  padding: 1rem;
+  padding-top: 0;
 }
 
 .nav-socials.bottom {
   position: fixed;
+  align-items: center;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -178,12 +181,12 @@ nav.top {
   background-color: var(--ycw-cs1);
   border: none;
   color: inherit;
-  padding: 1rem 2rem;
+  padding: 2rem 4rem;
   text-transform: uppercase;
   font-weight: 600;
   transition: all 250ms ease;
   align-self: flex-start;
-  font-size: 24px;
+  font-size: 30px;
 }
 
 .hero-btn:hover {
@@ -206,6 +209,7 @@ nav.top {
   background-color: var(--ycw-cs1);
   color: var(--ycw-cs3);
   font-weight: 600;
+  font-size: 24px;
 }
 
 .hero-btns {
@@ -223,8 +227,62 @@ nav.top {
   text-transform: uppercase;
 }
 
+main .main-area {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+main
+  .main-area
+  .front-article
+  .content
+  .article-heading.article-heading__front {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+main .main-area .front-article .content .article-main-heading {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+main .main-area .front-article .content .article-para {
+  margin-top: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+main .main-area .front-article {
+  display: flex;
+  flex-direction: column;
+}
+
 main .main-area .front-article .content .article-heading {
   color: var(--ycw-cs1);
+  font-size: 24px;
+}
+
+main .main-area .front-article .content .article-main-heading {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+main .main-area .front-article .content {
+  order: 0;
+  padding: 2.5rem 2rem;
+  flex: 1;
+  flex-basis: 50%;
+}
+
+main .main-area .front-article .img-container {
+  order: 1;
+  flex: 1;
+  flex-basis: 50%;
+}
+
+main .main-area .front-article .img-container .fa-img {
+  max-width: 800px;
 }
 
 @media screen and (min-width: 800px) {
