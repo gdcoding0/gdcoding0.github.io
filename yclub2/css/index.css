@@ -181,12 +181,11 @@ nav.top {
   background-color: var(--ycw-cs1);
   border: none;
   color: inherit;
-  padding: 2rem 4rem;
+  padding: 1rem 2rem;
   text-transform: uppercase;
   font-weight: 600;
   transition: all 250ms ease;
   align-self: flex-start;
-  font-size: 30px;
 }
 
 .hero-btn:hover {
