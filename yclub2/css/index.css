@@ -1,0 +1,273 @@
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), url(../fonts/inter.ttf) format("truetype");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol,
+menu {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 !important;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  line-height: 1.5 !important;
+}
+
+/* GLOBAL VARIABLES */
+
+:root {
+  /* Colour Scheme */
+  --ycw-cs1: #e30000;
+  --ycw-cs2: #1e1e1e;
+  --ycw-cs3: #fff;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* HTML */
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  position: relative;
+  background-image: url(../img/nav/herobg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+header nav {
+  color: var(--ycw-cs3);
+  background-color: var(--ycw-cs2);
+}
+
+nav.top {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+#ham {
+  width: 25px;
+}
+
+.club-logo {
+  width: 150px;
+  transition: all 300ms linear;
+}
+
+.nav-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+#ham {
+  filter: invert(1);
+  transition: all 250ms ease-out;
+  cursor: pointer;
+}
+
+.club-logo {
+  width: 100px;
+}
+
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  transition: all 250ms ease-out;
+  padding: 1rem;
+  padding-top: 0;
+}
+
+.nav-links li {
+  margin-top: 1rem;
+  font-size: 24px;
+}
+
+.show-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 15rem;
+}
+
+.nav-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.nav-socials.bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.nav-socials .ns-logos .nav-social {
+  display: inline !important;
+  width: 35px;
+  margin-top: 0.25rem;
+}
+
+.hero-area {
+  padding-left: 1rem;
+  padding-top: 4rem;
+  height: 50vh;
+  color: var(--ycw-cs3);
+}
+
+.hero-main {
+  font-size: 26px;
+  text-transform: uppercase;
+}
+
+.hero-main.hero-main__large {
+  font-size: 52px;
+}
+
+/* Hero CTA buttons */
+.hero-btn {
+  background-color: var(--ycw-cs1);
+  border: none;
+  color: inherit;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 250ms ease;
+  align-self: flex-start;
+  font-size: 24px;
+}
+
+.hero-btn:hover {
+  transform: translateY(1px);
+  background-color: var(--ycw-cs3);
+  color: var(--ycw-cs2);
+  border-bottom: 10px solid var(--ycw-cs1);
+}
+
+/* Article buttons */
+
+.article-btn {
+  border: none;
+  background-color: transparent;
+  padding: 1rem 2.5rem;
+  text-transform: uppercase;
+}
+
+.article-btn__red {
+  background-color: var(--ycw-cs1);
+  color: var(--ycw-cs3);
+  font-weight: 600;
+}
+
+.hero-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 2rem;
+}
+
+/* Section headers */
+
+.section-header {
+  font-size: 32px !important;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+main .main-area .front-article .content .article-heading {
+  color: var(--ycw-cs1);
+}
+
+@media screen and (min-width: 800px) {
+  .club-logo {
+    width: 175px;
+  }
+
+  .nav-container {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  #ham {
+    display: none;
+  }
+
+  .nav-head {
+    padding: 0;
+  }
+
+  .nav-links {
+    height: auto;
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+
+  .nav-socials {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-socials .ns-logos {
+    align-self: flex-end;
+  }
+
+  .nav-socials .ns-text {
+    align-self: flex-end;
+  }
+}
