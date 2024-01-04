@@ -218,6 +218,12 @@ nav.top {
   margin-top: 2rem;
 }
 
+/* Main socials / logos */
+
+.main-social {
+  width: 100px !important;
+}
+
 /* Section headers */
 
 .section-header {
@@ -282,6 +288,236 @@ main .main-area .front-article .img-container {
 
 main .main-area .front-article .img-container .fa-img {
   max-width: 800px;
+}
+
+main .club-history {
+  background-color: var(--ycw-cs2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../img/main/yclubhistory.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+main .club-history .clubhistory-bg {
+  width: 95vw;
+}
+
+main .club-history .ch-container {
+  color: var(--ycw-cs3);
+  padding-top: 3rem;
+  width: 100% !important;
+}
+
+main .club-history .ch-container .ch-wrapper {
+  text-align: center;
+  padding: 0 2.5rem;
+}
+
+main .club-history .ch-container .ch-wrapper .ch-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 0 2.5rem;
+}
+
+main
+  .club-history
+  .ch-container
+  .ch-wrapper
+  .ch-content
+  .ch-top
+  .section-header {
+  font-size: 55px;
+}
+
+main .club-history .ch-container .ch-wrapper .ch-content .ch-history .ch-para {
+  margin-top: 2rem;
+}
+
+main .main-socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem !important;
+}
+
+main .main-socials .section-header.section-header__socials {
+  margin-bottom: 6rem !important;
+}
+
+main .main-socials .socials-container .main-social {
+  display: inline;
+}
+
+main .main-socials .socials-container .main-social:not(:last-child) {
+  margin-right: 3rem;
+}
+
+footer .footer-contact {
+  /* padding: 1rem 2rem; */
+  background-color: var(--ycw-cs1);
+  padding-top: 4rem;
+}
+
+footer .footer-contact .section-header.section-header__footer {
+  color: var(--ycw-cs3);
+  text-align: center;
+}
+
+footer .footer-contact .contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  color: var(--ycw-cs3);
+}
+
+footer .footer-contact .contact-container .contact-item {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: flex-start;
+}
+
+footer .footer-contact .contact-container .contact-item .contact {
+  font-size: 20px;
+}
+
+footer .footer-contact .contact-container .contact-item .contact.contact-title {
+  font-weight: 600;
+}
+
+footer .footer-contact .contact-area {
+  padding-top: 4rem !important;
+}
+
+footer .footer-nav .footer-container.footer-container__nav {
+  display: flex;
+  padding: 2rem;
+  gap: 10px;
+}
+
+footer
+  .footer-nav
+  .footer-container.footer-container__nav
+  .club-logo.club-logo__main {
+  align-self: flex-start !important;
+  margin-right: 3rem;
+}
+
+footer
+  .footer-nav
+  .footer-container.footer-container__nav
+  .footer-list
+  .li-head {
+  color: var(--ycw-cs1) !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 22px;
+  margin-bottom: 1rem;
+}
+
+footer
+  .footer-nav
+  .footer-container.footer-container__nav
+  .footer-list
+  li:not(:first-child) {
+  font-weight: 600;
+  margin-top: 0.2rem;
+}
+
+footer .footer-social {
+  width: 30px;
+  display: inline-block;
+  margin-right: 0.25rem;
+}
+
+footer .footer-list.footer-list_socials .li-not-li {
+  display: block !important;
+}
+
+footer
+  .footer-nav
+  .footer-list.footer-list_newsletter
+  .newsletter-box
+  .news-container {
+  position: relative;
+  margin-top: 0.5rem;
+}
+
+footer
+  .footer-nav
+  .footer-list.footer-list_newsletter
+  .newsletter-box
+  .news-container
+  .newsletter {
+  padding: 0.75rem 0.75rem 0.75rem 1rem;
+  width: 200px;
+  background-color: #1e1e1e38;
+  border: none;
+}
+
+footer
+  .footer-nav
+  .footer-list.footer-list_newsletter
+  .newsletter-box
+  .news-container
+  .newsletter:active {
+  outline: 2px solid var(--ycw-cs1);
+}
+
+footer
+  .footer-nav
+  .footer-list.footer-list_newsletter
+  .newsletter-box
+  .news-container
+  .newsletter:focus {
+  outline: 4px solid var(--ycw-cs2);
+}
+
+footer
+  .footer-nav
+  .footer-list.footer-list_newsletter
+  .newsletter-box
+  .news-container
+  .footer-btn {
+  position: absolute;
+  right: 0;
+  background-color: var(--ycw-cs1);
+  color: var(--ycw-cs3);
+  border: none;
+  height: 100%;
+  padding: 0.5rem 1rem;
+  width: 100px;
+}
+
+footer
+  .footer-nav
+  .footer-list.footer-list_newsletter
+  .newsletter-box
+  .news-container
+  .footer-btn:focus {
+  background-color: var(--ycw-cs2);
+  color: var(--ycw-cs3);
+}
+
+footer .footer-end {
+  background-color: var(--ycw-cs2);
+  color: var(--ycw-cs3);
+  padding: 1rem 2rem;
+}
+
+footer .footer-end .footer-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 @media screen and (min-width: 800px) {
