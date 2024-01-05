@@ -114,7 +114,6 @@ html {
   background-color: var(--ycw-cs1);
   color: var(--ycw-cs3);
   font-weight: 600;
-  font-size: 24px;
 }
 
 /* Main socials / logos */
@@ -323,7 +322,6 @@ main .club-history .ch-container .ch-wrapper .ch-content {
   flex-direction: column;
   justify-content: center;
   margin-top: 2rem;
-  padding: 0 2.5rem;
 }
 
 main
@@ -375,9 +373,8 @@ footer .footer-contact .section-header.section-header__footer {
 
 footer .footer-contact .contact-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
+  flex-direction: column !important;
+  gap: 10px;
   color: var(--ycw-cs3);
 }
 
@@ -403,6 +400,7 @@ footer .footer-contact .contact-area {
 
 footer .footer-nav .footer-container.footer-container__nav {
   display: flex;
+  flex-direction: column;
   padding: 2rem;
   gap: 60px;
 }
